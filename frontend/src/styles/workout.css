@@ -1,0 +1,198 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Main container for the exercise section */
+  .exercise-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('https://static.vecteezy.com/system/resources/previews/049/227/203/non_2x/fitness-exercise-and-woman-with-dumbbell-for-workout-muscle-training-and-body-building-gym-strong-girl-weight-lifting-on-white-background-from-back-isolated-on-transparent-background-photo.jpeg')no-repeat center center/cover;
+    padding: 40px 20px;
+    min-height: 100vh;
+  }
+  
+  /* Add exercise form container */
+  .add-exercise-form {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 490px;
+    padding: 30px;
+    border-radius: 40px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for the form */
+  .add-exercise-form:hover {
+    transform: translateY(-5px);
+  }
+  
+  .add-exercise-form h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2f2f2f;
+    margin-bottom: 20px;
+  }
+  
+  /* Form label styling */
+  .add-exercise-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  /* Input field styling */
+  .add-exercise-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Focus effect for input fields */
+  .add-exercise-form input:focus {
+    border-color: #3f51b5;
+    background-color: #fff;
+    outline: none;
+  }
+  
+  /* Submit button styling */
+  .add-button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.2rem;
+    background-color: #3f51b5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-button:hover {
+    background-color: #303f9f;
+  }
+  
+  /* Exercise list container */
+  .exercise-list {
+    width: 100%;
+    max-width: 520px;
+    margin-top: 40px;
+    padding: 0;
+  }
+  
+  .exercise-list h3 {
+    font-size: 1.3rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  /* Individual exercise item */
+  .exercise-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 14px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for each exercise item */
+  .exercise-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Text for the exercise item */
+  .exercise-item p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+    text-align: center;
+  }
+  
+  /* Edit and delete buttons container */
+  .exercise-item span {
+    display: flex;
+    gap: 12px;
+  }
+  
+  /* Edit button styling */
+  .edit-button {
+    padding: 8px 16px;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-button:hover {
+    background-color: #fb8c00;
+  }
+  
+  /* Delete button styling */
+  .delete-button {
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* No exercises found message */
+  .exercise-list p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    font-style: italic;
+  }
+  
+  /* Responsive design for mobile */
+  @media (max-width: 480px) {
+    .add-exercise-form {
+      padding: 20px;
+    }
+  
+    .add-button {
+      font-size: 1rem;
+    }
+  
+    .exercise-item {
+      padding: 12px;
+    }
+  
+    .edit-button,
+    .delete-button {
+      font-size: 0.9rem;
+    }
+  }
+  
