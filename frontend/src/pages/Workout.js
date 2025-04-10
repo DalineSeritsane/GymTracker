@@ -67,12 +67,17 @@ const Workout = () => {
 
   // Delete an exercise
   const handleDelete = async (id) => {
-    if (!id) return console.error("Invalid exercise ID!");
-
+    console.log('Deleting exercise with ID:', id);  
+    if (!id) {
+      console.error("Exercise ID is undefined or invalid!");
+      return; 
+    }
     try {
       const response = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/exercises/${id}`);
       if (response.status === 200) {
-        setNewExercises(prev => prev.filter(ex => ex._id !== id));
+        setNewExercises((prevExercises) =>
+          prevExercises.filter((exercise) => exercise._id !== id)
+        );
       } else {
         console.error("Error deleting exercise:", response.data);
       }
@@ -80,7 +85,6 @@ const Workout = () => {
       console.error("Error deleting exercise:", error);
     }
   };
-
   // Handle editing an exercise
   const handleEdit = (exercise) => {
     setIsEditing(true);

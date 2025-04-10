@@ -3,6 +3,8 @@ const express = require('express');
 const cors = require("cors");
 const connectDB = require("./config/db");
 
+
+
 const app = express();
 
 // Middleware
@@ -31,6 +33,22 @@ app.get('/api/exercises', (req, res) => {
     },
     {
       _id: '2',
+      name: 'Lifts',
+      category: 'Arms',
+      sets: 6,
+      reps: 8,
+      weight: 60
+    },
+    {
+      _id: '3',
+      name: 'Push ups',
+      category: 'Abs',
+      sets: 4,
+      reps: 7,
+      weight: 20
+    },
+    {
+      _id: '4',
       name: 'Squat',
       category: 'Legs',
       sets: 4,

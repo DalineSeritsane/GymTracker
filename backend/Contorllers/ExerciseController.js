@@ -57,7 +57,7 @@ exports.addExercise = async (req, res) => {
         const newExercise = new Exercise({ name, sets, reps, duration, category, rest });
         const savedExercise = await newExercise.save();
 
-        res.status(201).json({ message: "Exercise added successfully!", exercise: savedExercise });
+        res.status(201).json({ message: "Exercise added successfully!", exercise: savedExercise }); // Ensure you're returning the full saved object
     } catch (error) {
         res.status(500).json({ message: "Server error", error: error.message });
     }
@@ -82,22 +82,21 @@ exports.updateExercise = async (req, res) => {
     }
 };
 
-// ✅ Delete an exercise by ID
-exports.deleteExercise = async (req, res) => {
+/// Controller for deleting an exercise using ID
+exports.deleteExerciseById = async (req, res) => {
     try {
         const { id } = req.params;
-        if (!mongoose.Types.ObjectId.isValid(id)) {
-            return res.status(400).json({ message: "Invalid Exercise ID" });
-        }
 
-        const deletedExercise = await Exercise.findByIdAndDelete(id);
+        // Find and delete the exercise by ID
+        const deletedExercise = await Workout.findByIdAndDelete(id);
+
         if (!deletedExercise) {
-            return res.status(404).json({ message: "Exercise not found" });
+            return res.status(404).json({ message: `Exercise with ID ${id} not found.` });
         }
 
-        res.json({ message: "Exercise deleted successfully!" });
+        res.json({ message: `Exercise with ID ${id} has been deleted successfully.` });
     } catch (error) {
-        res.status(500).json({ message: "Server error", error: error.message });
+        res.status(500).json({ message: error.message });
     }
 };
 
