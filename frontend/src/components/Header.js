@@ -15,7 +15,7 @@ const Header = () => {
             <Link to="/" className="hover:text-green-300">Home</Link>
           </li>
           <li>
-            <Link to="/workout" className="hover:text-green-300">Add Workouts</Link>
+            <Link to="/workout" className="hover:text-green-300">Add Workout</Link>
           </li>
           <li>
             <Link to="/exercises" className="hover:text-green-300">Exercises</Link>

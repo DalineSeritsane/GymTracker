@@ -17,7 +17,7 @@ const Hero = () => {
           <div className="container text-center text-light">
             <h1 className="display-3 fw-bold" style={{marginTop:"250px"}}>Welcome to The Empowershe Fitness</h1>
             <p className="lead mb-4">
-            Every Drop of Sweat is an Investment in You! Stronger bodies, Stronger minds!
+            Every Drop of Sweat is an Investment in You! Stronger bodies, Stronger minds! Join in now!
             </p>
             <Link to={"/workout"}></Link><button className="home-button btn btn-primary btn-lg" onClick={handleNavigation}>Get Started Here</button>
           </div>
